@@ -12,6 +12,11 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
+const emptyForm = () => {
+  noteTitle.value = '';
+  noteText.value = '';
+};
+
 // Show an element
 const show = (elem) => {
   elem.style.display = 'inline';
@@ -40,7 +45,18 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  });
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log('Successful POST request:', data);
+
+      //Empty the input fields
+      emptyForm();
+      return data;
+    })
+    .catch((error) => {
+      console.error('Error in POST request:', error);
+    });
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {

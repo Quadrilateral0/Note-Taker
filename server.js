@@ -15,7 +15,7 @@ app.get('/', (req, res) =>
 );
 
 //GET request for notes
-app.get('/api/reviews', (req, res) => {
+app.get('/api/notes', (req, res) => {
   //Send a message to the client
   res.status(200).json(`${req.method} request received to get notes`);
 
@@ -24,7 +24,7 @@ app.get('/api/reviews', (req, res) => {
 });
 
 //POST request to add a note
-app.post('/api/reviews', (req, res) => {
+app.post('/api/notes', (req, res) => {
   // Log that a POST request was received
   console.info(`${req.method} request received to add a note`);
 
@@ -32,7 +32,7 @@ app.post('/api/reviews', (req, res) => {
   const { title, text } = req.body;
 
   //If all the required properties are present
-  if (product && review && username) {
+  if (title && text) {
     //Variable for the object to be saved
     const newNote = {
       title,

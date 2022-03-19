@@ -18,7 +18,7 @@ npm init -y
 
 npm install express
 
-node Develop/server.js
+node server.js
 ```
 
 [![Video demo of completed project](images/note-taker-demo.gif)](https://youtu.be/cKuf03urrHA)
