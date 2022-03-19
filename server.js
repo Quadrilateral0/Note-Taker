@@ -29,14 +29,14 @@ app.post('/api/notes', (req, res) => {
   console.info(`${req.method} request received to add a note`);
 
   //Destructuring assignment for the items in req.body
-  const { title, text } = req.body;
+  const { noteTitle, noteText } = req.body;
 
   //If all the required properties are present
-  if (title && text) {
+  if (noteTitle && noteText) {
     //Variable for the object to be saved
     const newNote = {
-      title,
-      text,
+      noteTitle,
+      noteText,
     };
 
     //Obtain existing notes
