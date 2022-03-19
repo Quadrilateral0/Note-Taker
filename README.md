@@ -12,6 +12,15 @@ For this project, I created an application that that can be used to write and sa
 ## Usage
 Visit my deployed application [here](https://github.com/Quadrilateral0/Note-Taker) and see below for a video demo.
 
+Run the backend server by completing the following in the terminal: 
+```
+npm init -y
+
+npm install express
+
+node Develop/server.js
+```
+
 [![Video demo of completed project](images/note-taker-demo.gif)](https://youtu.be/cKuf03urrHA)
 
 
