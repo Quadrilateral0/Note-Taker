@@ -4,7 +4,7 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
-if (window.location.pathname === '/notes') {
+if (window.location.pathname === '/notes.html') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
@@ -13,8 +13,8 @@ if (window.location.pathname === '/notes') {
 }
 
 const emptyForm = () => {
-  noteTitle.value = '';
-  noteText.value = '';
+ noteTitle.value = '';
+ noteText.value = '';
 };
 
 // Show an element

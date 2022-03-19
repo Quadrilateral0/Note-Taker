@@ -1,6 +1,6 @@
 # Note Taking Application
 ## Description
-For this project, I created an application that that can be used to write and save notes. This application utilizes an Express.js backend and will save and retrieve note data from a JSON file.
+For this project, I created an application that that can be used to write and save notes. This application utilizes an Express.js backend and will save and retrieve note data from a JSON file. Functionality was tested using Insomnia.
 
 ## Table of Contents
 - [Usage](#usage)
@@ -14,11 +14,7 @@ Visit my deployed application [here](https://github.com/Quadrilateral0/Note-Take
 
 Run the backend server by completing the following in the terminal: 
 ```
-npm init -y
-
-npm install express
-
-node server.js
+npm start
 ```
 
 [![Video demo of completed project](images/note-taker-demo.gif)](https://youtu.be/cKuf03urrHA)
@@ -56,6 +52,7 @@ A thanks to my resources:
 - [Heroku](https://www.heroku.com/what)
 - [Express.js](https://expressjs.com/)
 - [Node.js](https://nodejs.dev/learn/introduction-to-nodejs) 
+- [Insomnia](https://insomnia.rest/)
 - [Screencastify](https://chrome.google.com/webstore/detail/screencastify-screen-vide/mmeijimgabbpbgpdklnllpncmdofkcpn?hl=en)
 - [Visual Studio Code](https://code.visualstudio.com/download)
 

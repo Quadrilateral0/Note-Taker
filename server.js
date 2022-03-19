@@ -16,8 +16,19 @@ app.get('/', (req, res) =>
 
 //GET request for notes
 app.get('/api/notes', (req, res) => {
-  //Send a message to the client
-  res.status(200).json(`${req.method} request received to get notes`);
+
+  //Obtain existing notes
+  fs.readFile('./db/db.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+    } else {
+      //Convert into JSON object
+      const parsedNotes = JSON.parse(data);
+
+       //Send a message to the client
+      res.status(200).json(parsedNotes);  
+    }
+  });
 
   //Log request to the terminal
   console.info(`${req.method} request received to get notes`);
@@ -27,7 +38,7 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
   // Log that a POST request was received
   console.info(`${req.method} request received to add a note`);
-
+  console.log(req.body);
   //Destructuring assignment for the items in req.body
   const { noteTitle, noteText } = req.body;
 
