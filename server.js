@@ -12,8 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/notes.html'))
+app.get('/notes', (req, res) =>
+  res.sendFile(path.join(__dirname, './public/notes.html'))
 );
 
 //GET request for notes
@@ -42,16 +42,18 @@ app.post('/api/notes', (req, res) => {
   console.info(`${req.method} request received to add a note`);
   console.log(req.body);
   //Destructuring assignment for the items in req.body
-  const { noteTitle, noteText } = req.body;
+  const { title, text } = req.body;
 
   //If all the required properties are present
-  if (noteTitle && noteText) {
+  if (title && text) {
     //Variable for the object to be saved
     const newNote = {
-      noteTitle,
-      noteText,
+      title,
+      text,
     };
 
+    console.log(newNote);
+    
     //Obtain existing notes
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
       if (err) {
