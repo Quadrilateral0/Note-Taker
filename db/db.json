@@ -1,14 +1,10 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
         "noteTitle": "Title",
         "noteText": "Sample text"
     },
     {
-        "title": "xdfsg",
-        "text": "jsjdjdjdjdjdjdjd"
+        "title": "New Note",
+        "text": "Do laundry"
     }
 ]

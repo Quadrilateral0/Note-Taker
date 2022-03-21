@@ -17,7 +17,7 @@ Run the backend server by completing the following in the terminal:
 npm start
 ```
 
-[![Video demo of completed project](images/note-taker-demo.gif)](https://youtu.be/cKuf03urrHA)
+![Video demo of completed project](assets/note-taker-demo.gif)
 
 
 ## User Story
